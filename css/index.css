@@ -1,0 +1,51 @@
+@charset: "UTF-8";
+#wrapper {
+  width: 900px;
+  margin: 0px auto;
+  padding: 10px;
+  background-color: #eee;
+}
+
+nav ul {
+  display: flex;
+}
+
+#works {
+  display: flex;
+  justify-content: space-around;
+}
+#works > * {
+  width: 33.33%;
+}
+#works > * section.work-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px 10px;
+  overflow: hidden;
+}
+#works > * section.work-card img {
+  filter: brightness(0.7);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+#works > * section.work-card img:hover {
+  filter: brightness(1);
+}
+#works > * section.work-card img:hover + h3 {
+  bottom: 0px;
+}
+#works > * section.work-card h3 {
+  position: absolute;
+  bottom: -100px;
+  width: 100%;
+  padding-left: 10px;
+  font-size: 0.8em;
+  line-height: 3em;
+  font-weight: normal;
+  color: #333;
+  background-color: rgba(200, 200, 200, 0.9);
+  transition: bottom 0.5s ease;
+}
+
+/*# sourceMappingURL=index.css.map */
