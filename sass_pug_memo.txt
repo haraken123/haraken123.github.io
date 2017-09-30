@@ -1,0 +1,7 @@
+npm i pug-cli -g
+
+
+pug --pretty pug --out ./ --watch
+sass --watch sass:css --style expanded 
+
+

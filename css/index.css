@@ -1,41 +1,142 @@
-@charset: "UTF-8";
+@charset "UTF-8";
+body {
+  color: #333;
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+
 #wrapper {
-  width: 900px;
-  margin: 0px auto;
+  max-width: 1024px;
+  width: 100%;
+  margin: 0px auto 8px;
+}
+
+#content-wrapper {
   padding: 10px;
   background-color: #eee;
 }
 
+nav {
+  position: fixed;
+  width: 100%;
+  min-width: 1024px;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0px 1px 1px #777;
+}
 nav ul {
   display: flex;
+  justify-content: space-around;
+  background-color: rgba(250, 250, 250, 0.9);
+  line-height: 2em;
+}
+nav ul li {
+  width: 20%;
+}
+nav ul li a {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  transition: all 0.2s ease;
+  border-bottom: 4px solid rgba(250, 250, 250, 0.9);
 }
 
-#works {
-  display: flex;
-  justify-content: space-around;
+.bottom-bordered {
+  box-sizing: border-box;
+  border-bottom: 4px solid rgba(16, 16, 247, 0.6);
 }
-#works > * {
-  width: 33.33%;
+
+.nav-index {
+  padding-top: 36px;
 }
-#works > * section.work-card {
+
+#toggle {
+  position: absolute;
+  left: 0px;
+  display: none;
+  background-color: rgba(250, 250, 250, 0.7);
+  border-bottom-right-radius: 25%;
+}
+#toggle a {
+  display: block;
+  padding: 12px;
+}
+#toggle a img {
+  display: block;
+  width: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    font-size: 0.9em;
+  }
+  nav ul {
+    display: flex;
+  }
+}
+@media screen and (max-width: 480px) {
+  #menu li {
+    width: 100%;
+  }
+
+  #toggle {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+footer {
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 3em;
+  color: #999;
+  background-color: #ddd;
+}
+footer address {
+  display: inline;
+}
+
+header {
+  background-image: url(../img/cover.png);
+  background-size: cover;
+}
+header h1 {
+  line-height: 2em;
+  font-size: 4em;
+}
+header p {
+  text-align: right;
+  line-height: 2em;
+}
+
+#greeting {
+  line-height: 4em;
+}
+
+#cards section.work-card {
+  width: calc(100%/3 - 1.5%*2);
   position: relative;
   background-color: #fff;
   border-radius: 10px;
-  margin: 20px 10px;
+  margin: 1.5%;
   overflow: hidden;
+  box-shadow: 1px 1px 5px #777;
 }
-#works > * section.work-card img {
+#cards section.work-card img {
+  display: block;
   filter: brightness(0.7);
   width: 100%;
   transition: all 0.3s ease;
 }
-#works > * section.work-card img:hover {
+#cards section.work-card img:hover {
   filter: brightness(1);
 }
-#works > * section.work-card img:hover + h3 {
+#cards section.work-card img:hover + h3 {
   bottom: 0px;
 }
-#works > * section.work-card h3 {
+#cards section.work-card h3 {
   position: absolute;
   bottom: -100px;
   width: 100%;
@@ -46,6 +147,28 @@ nav ul {
   color: #333;
   background-color: rgba(200, 200, 200, 0.9);
   transition: bottom 0.5s ease;
+}
+
+.info-sect {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  margin: 10px 0px;
+  padding: 15px;
+  line-height: 2em;
+}
+.info-sect p {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  #cards section.work-card {
+    width: calc(100%/2 - 1.5%*2);
+  }
+}
+@media screen and (max-width: 480px) {
+  #cards section.work-card {
+    width: calc(100% - 1.5%*2);
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

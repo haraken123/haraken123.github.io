@@ -6,76 +6,63 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="css/myreset.css" />
 <link rel="stylesheet" href="css/index.css" />
-<title>Document</title>
+<title>portfolio</title>
 </head>
 <body>
-<div id="wrapper">
-<header id="top">
-<nav>
-<ul>
-<li><a href="#top">トップ</a></li>
-<li><a href="#greeting">ご挨拶</a></li>
-<li><a href="#works">作品</a></li>
-<li><a href="#profile">プロフィール</a></li>
-<li><a href="#contact">コンタクト</a></li>
+<div id="wrapper"><nav>
+<div id="toggle"><a href="#"><img src="img/menu.svg"></a></div>
+<ul id="menu">
+<li><a href="#top" class="nav-item">トップ</a></li>
+<li><a href="#greeting" class="nav-item">ご挨拶</a></li>
+<li><a href="#works" class="nav-item">作品</a></li>
+<li><a href="#profile" class="nav-item">プロフィール</a></li>
+<li><a href="#contact" class="nav-item">コンタクト</a></li>
 </ul>
-</nav>
+</nav><header id="top" class="nav-index">
 <section class="work-card">
 <h1>portfolio</h1>
-<p><a href="#">design × tech</a></p>
+<p><a href="#">design × logic</a></p>
 </section>
 </header>
-<div id="greeting">
-<p>ここに挨拶文が入ります。ここに挨拶文が入ります。ここに挨拶文が入ります。ここに挨拶文が入ります。ここに挨拶文が入ります。ここに挨拶文が入ります。</p>
+<div id="content-wrapper">
+<div id="greeting" class="nav-index">
+<p>ここに挨拶文が入ります。ここに挨拶文が入ります。<br>ここに挨拶文が入ります。ここに挨拶文が入ります。<br>ここに挨拶文が入ります。ここに挨拶文が入ります。</p>
 </div> <!-- #greeting -->
-<div id="works">
-<div id="web1">
-<section class="work-card">
-<img src="img/tokio_top.jpg" alt="">
-<h3>東京サイト</h3>
-</section>
-<section class="work-card">
-<img src="img/malaysia_top.png" alt="">
-<h3>動物サイト</h3>
-</section>
-<section class="work-card">
-<img src="img/malaysia_modal.png" alt="">
-<h3>動物サイト</h3>
-</section>
-</div> <!-- #web1 -->
-<div id="web2">
-<section class="work-card">
-<img src="img/kappabashi_top.png" alt="">
-<h3>観光サイト</h3>
-</section>
-<section class="work-card">
+<div id="works" class="nav-index">
+<div id="cards"><section class="work-card">
+<a href="work-detail.html#work1">
+<img src="img/sweets-sugoroku.jpg" alt="">
+<h3>人生スイーツ</h3>
+</a>
+</section><section class="work-card">
+<a href="work-detail.html#work2">
 <img src="img/rakugo.jpg" alt="">
-<h3>落語サイト</h3>
-</section>
-<section class="work-card">
-<img src="" alt="">
-<h3></h3>
-</section>
-</div> <!-- #web2 -->
-<div id="others">
-<section class="work-card">
-<img src="img/ukiyoe.png" alt="">
-<h3>浮世絵トレース</h3>
-</section>
-<section class="work-card">
+<h3>目黒の秋刀魚</h3>
+</a>
+</section><section class="work-card">
+<a href="work-detail.html#work3">
 <img src="img/T_shirt_tiedie.jpg" alt="">
 <h3>Tシャツデザイン</h3>
-</section>
-<section class="work-card">
-<img src="img/pirates.gif" alt="">
-<h3>バナー</h3>
-</section>
-</div> <!-- #others -->
+</a>
+</section><section class="work-card">
+<a href="work-detail.html#work4">
+<img src="img/script2.png" alt="">
+<h3>ドミナントトーン・スクリプト</h3>
+</a>
+</section></div> <!-- #cards -->
 </div> <!-- #works -->
-<div id="profile">
-</div> <!-- #profile -->
-<div id="contact">
-</div> <!-- #contact -->
-</div> <!-- #wrapper -->
+<section id="profile" class="info-sect nav-index">
+<h2>プロフィール</h2>
+<p>元フロントエンドエンジニア　現在Web/UIデザイナーを目指して勉強中です</p>
+<p>Adobe(Ai,Ps,XD), HTML5, CSS3, JavaScript(jQuery,AngularJS,ES6), TOEIC, マラソン</p>
+</section> <!-- #profile -->
+<section id="contact" class="info-sect nav-index">
+<h2>コンタクト</h2>
+</section> <!-- #contact -->
+</div> <!-- content-wrapper --><footer>&copy; 2017 <address>haraken123</address></footer></div> <!-- #wrapper -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

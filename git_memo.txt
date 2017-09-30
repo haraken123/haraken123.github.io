@@ -1,0 +1,19 @@
+
+git init
+
+
+git config --global alias.st status
+git config --global alias.co checkout
+
+git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+git config --global alias.lga "log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+
+
+git add -A
+(すべてをadd)
+
+git commit -m "First commit."
+
+git checkout -b dev
+(devブランチを作成して切り替え)
+
