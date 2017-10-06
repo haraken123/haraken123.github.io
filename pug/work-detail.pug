@@ -7,18 +7,85 @@
   <link rel="stylesheet" href="css/myreset.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="css/work-detail.css" />
-  <title>Document</title>
+  <title>作品ページ ハラシマケンポートフォリオ</title>
 </head>
 <body>
   <div id="wrapper">
     <header>
-      <a href="index.html">Portfolio top↑</a> 
+      <a href="index.html">Portfolio top↑</a>
+      <nav>
+        <ul id="ancher_list">
+          include components/variables
+          - var j = 0
+          each work in works
+            if work.isPublic
+              <li><a href="#work#{++j}">#{j}</a></li>
+              <li>/</li>
+
+        </ul>
+      </nav>
     </header>
-    <div id="content-wrapper"></div>
+    <div id="content-wrapper">
+      include components/variables
+      - var i = 0
+      each work in works
+        if work.isPublic
+          <div id="work#{++i}" class="work-item">
+            <div class="work_header">
+              <div class="work_tags cf">
+                each tag in work.tags
+                  <div class="work_tag#{tag}">#{tagNames[tag]}</div>
+              </div>
+              <div class="work_date">#{work.date}制作</div>
+              <div class="work_title">「#{work.title}」</div>
+            </div>
+            <div class="work_images cf">
+              each image in work.images
+                <a class="work_image" data-fancybox="gallery#{i}" href="img/#{image.name}">
+                  <figure><img src="img/#{image.name}"><figcaption>#{image.caption}</figcaption></figure>
+                </a>
+            </div>
+            <div class="work_info">
+              <div class="work_concept cf">
+                <div class="work_data_caption">コンセプト： </div>
+                <div class="work_data">#{work.concept}</div>
+              </div>
+              <div class="work_role cf">
+                <div class="work_data_caption">役割： </div>
+                <div class="work_data">#{work.role}</div>
+              </div>
+              <div class="work_tools cf">
+                <div class="work_data_caption">使用ツール： </div>
+                <div class="work_data">#{work.tools}</div>
+              </div>
+              if work.skill
+                <div class="work_skill cf">
+                  <div class="work_data_caption">使用技術： </div>
+                  <div class="work_data">#{work.skill}</div>
+                </div>
+              <div class="work_term cf">
+                <div class="work_data_caption">制作期間： </div>
+                <div class="work_data">#{work.term}</div>
+              </div>
+              <div class="work_detail cf">
+                <div class="work_data_caption">詳細： </div>
+                <div class="work_data">#{work.detail}</div>
+              </div>
+              if work.isPublic && work.url
+                <div class="work_url cf">
+                  <div class="work_data_caption">リンク： </div>
+                  <a href="#{work.url}" target="_blank">
+                    <div class="work_data">#{work.url}</div>
+                  </a>
+                </div>
+            </div>
+            <a class="next_link" href="#work#{i+1}"><span class="sankaku"></span></a>
+          </div>
+    </div>
     include components/footer
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.20/jquery.fancybox.min.js"></script>
-  <script src="js/ajaxtest.js"></script>
+  <!--script src="js/ajaxtest.js"></script-->
 </body>
 </html>

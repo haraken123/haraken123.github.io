@@ -1,4 +1,5 @@
 $(function() {
+  /*
   var scrollValue // 現在のY座標
   var indexOffsets =[]; // 各インデックスエリアのY座標
   var index = 0; // 現在表示しているエリアのインデックス
@@ -42,7 +43,7 @@ $(function() {
       // スクロール量が所定の位置を越えていない場合はfadeinクラスを外す
         $(this).removeClass('fadein');       
     }*/
-  });
+//  });
   
   
   $("#toggle").click(function(){
@@ -61,8 +62,44 @@ $(function() {
 
   $('#cards').imagesLoaded( function() {
     $('#cards').masonry({
-      itemSelector: '.work-card'
+      itemSelector: '.work-card',
+      isAnimated: true
     });
   });
-
+  
+  $(function(){
+    $('.work-card, .info-sect ').css("opacity","0");
+    $(window).scroll(function (){
+      $(".work-card, .info-sect ").each(function(){
+        var imgPos = $(this).offset().top;    
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > imgPos - windowHeight){
+          $(this).css("opacity","1" );
+          $(this).css("margin-top","1.5%" );
+        } else {
+          $(this).css("opacity","0" );
+          $(this).css("margin-top","5%" );
+        }
+      });
+      var ii = 0;
+      $(".nav-index ").each(function(){
+        ii++;
+        var imgPos = $(this).offset().top;
+        var imgHeight = $(this).height();
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= imgPos && scroll <= imgPos + imgHeight ){
+          console.log(ii+" added");
+          console.log(scroll+"  scroll");
+          console.log(imgPos+"  imgPos");
+          console.log(imgHeight+"  imgHeight");
+          $( "nav ul li:nth-child(" + ii + ") .nav-item" ).addClass('bottom-bordered');       
+        } else {
+          console.log(ii+" removed");
+          $( "nav ul li:nth-child(" + ii + ") .nav-item" ).removeClass('bottom-bordered');       
+        }
+      });
+    });
+  });
 });

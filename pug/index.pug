@@ -6,21 +6,18 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/myreset.css" />
   <link rel="stylesheet" href="css/index.css" />
-  <title>portfolio</title>
+  <title>ハラシマケンポートフォリオ</title>
 </head>
 <body>
   <div id="wrapper">
     include components/nav
     <header id="top" class="nav-index">
-      <section class="work-card">
-        <h1>portfolio</h1>
-        <p><a href="#">design × logic</a></p>
-      </section>
+      <!--img class="hero_img" src="img/cover_left.png" alt=""-->
+      <div class="profile">
+        <p><span class="profile_text">元フロントエンドエンジニア<br>現在Web/UIデザイナーを目指して勉強中です</br>Adobe(Ai,Ps,XD), HTML5, CSS3, JavaScript(jQuery,AngularJS,ES6), TOEIC, マラソン</span></p>
+      </div>
     </header>
     <div id="content-wrapper">
-      <div id="greeting" class="nav-index">
-        <p>ここに挨拶文が入ります。ここに挨拶文が入ります。<br>ここに挨拶文が入ります。ここに挨拶文が入ります。<br>ここに挨拶文が入ります。ここに挨拶文が入ります。</p>
-      </div> <!-- #greeting -->
       <div id="works" class="nav-index">
         <div id="cards">
           include components/variables
@@ -29,21 +26,18 @@
             if work.isPublic
               <section class="work-card">
                 <a href="work-detail.html#work#{++i}">
-                  <img src="img/#{work.images[0]}" alt="">
+                  - var index = 0
+                  if work.thumbnailIndex
+                    - var index = work.thumbnailIndex
+                  <img src="img/#{work.images[index].name}" alt="">
                   <h3>#{work.title}</h3>
                 </a>
               </section>
         </div> <!-- #cards -->
       </div> <!-- #works -->
-      
-      <section id="profile" class="info-sect nav-index">
-        <h2>プロフィール</h2>
-        <p>元フロントエンドエンジニア　現在Web/UIデザイナーを目指して勉強中です</p>
-        <p>Adobe(Ai,Ps,XD), HTML5, CSS3, JavaScript(jQuery,AngularJS,ES6), TOEIC, マラソン</p>
-      </section> <!-- #profile -->
-      
       <section id="contact" class="info-sect nav-index">
         <h2>コンタクト</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScEQOX2o9lXW757XbUlUqlwbi8At3yT0HdNfDkqeetveVcfzQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます...</iframe>
       </section> <!-- #contact -->
     </div> <!-- content-wrapper -->
     include components/footer
@@ -51,6 +45,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+
   <script src="js/script.js"></script>
 </body>
 </html>

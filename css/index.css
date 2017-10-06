@@ -18,7 +18,7 @@ body {
 nav {
   position: fixed;
   width: 100%;
-  min-width: 1024px;
+  max-width: 1024px;
   top: 0;
   z-index: 999;
   box-shadow: 0px 1px 1px #777;
@@ -26,11 +26,11 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-around;
-  background-color: rgba(250, 250, 250, 0.9);
+  background-color: rgba(232, 236, 237, 0.9);
   line-height: 2em;
 }
 nav ul li {
-  width: 20%;
+  width: calc( 100% / 3 );
 }
 nav ul li a {
   display: block;
@@ -38,15 +38,15 @@ nav ul li a {
   font-weight: bold;
   color: #555;
   transition: all 0.2s ease;
-  border-bottom: 4px solid rgba(250, 250, 250, 0.9);
+  border-bottom: 4px solid rgba(232, 236, 237, 0.9);
 }
 
 .bottom-bordered {
   box-sizing: border-box;
-  border-bottom: 4px solid rgba(16, 16, 247, 0.6);
+  border-bottom: 4px solid rgba(40, 3, 104, 0.8);
 }
 
-.nav-index {
+.nav-index + .nav-index {
   padding-top: 36px;
 }
 
@@ -98,17 +98,52 @@ footer address {
   display: inline;
 }
 
+body {
+  background-color: rgba(232, 236, 237, 0.9);
+}
+
+#wrapper {
+  overflow: hidden;
+  background-image: url(../img/cover_left3.jpg);
+  background-size: auto 120%;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#content-wrapper {
+  background-color: rgba(232, 236, 237, 0.9);
+}
+
 header {
-  background-image: url(../img/cover.png);
-  background-size: cover;
+  height: 80vh;
+  position: relative;
 }
-header h1 {
-  line-height: 2em;
-  font-size: 4em;
+header .hero_img {
+  display: block;
+  margin: 0 auto;
+  max-height: 100%;
 }
-header p {
+header .profile {
+  position: absolute;
+  bottom: 9px;
+  padding: 4px;
+  left: 0;
+  right: 67px;
+  font-size: 0.95em;
+  font-weight: bold;
   text-align: right;
-  line-height: 2em;
+  margin: 0 10px;
+  width: 380px;
+  transform: rotate(0deg);
+  color: #0d2126;
+}
+header .profile p {
+  width: 100%;
+}
+header .profile p .profile_text {
+  background-color: rgba(163, 193, 201, 0.7);
+  line-height: 1.1em;
 }
 
 #greeting {
@@ -118,15 +153,15 @@ header p {
 #cards section.work-card {
   width: calc(100%/3 - 1.5%*2);
   position: relative;
-  background-color: #fff;
-  border-radius: 10px;
+  background-color: #d9edf2;
   margin: 1.5%;
   overflow: hidden;
-  box-shadow: 1px 1px 5px #777;
+  box-shadow: 1px 1px 5px 2px #777;
+  transition: 0.7s all 0s ease;
 }
 #cards section.work-card img {
   display: block;
-  filter: brightness(0.7);
+  filter: brightness(0.65);
   width: 100%;
   transition: all 0.3s ease;
 }
@@ -134,38 +169,58 @@ header p {
   filter: brightness(1);
 }
 #cards section.work-card img:hover + h3 {
-  bottom: 0px;
+  top: 0px;
 }
 #cards section.work-card h3 {
   position: absolute;
-  bottom: -100px;
+  top: -100px;
   width: 100%;
   padding-left: 10px;
   font-size: 0.8em;
   line-height: 3em;
-  font-weight: normal;
-  color: #333;
+  font-weight: bold;
+  color: #000;
   background-color: rgba(200, 200, 200, 0.9);
-  transition: bottom 0.5s ease;
+  transition: top 0.5s ease;
 }
 
 .info-sect {
   min-height: 100vh;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.5);
   margin: 10px 0px;
   padding: 15px;
   line-height: 2em;
+  opacity: 0;
+  transition: 0.7s all 0s ease;
 }
 .info-sect p {
   text-align: right;
 }
+.info-sect iframe {
+  width: 100%;
+  height: 934px;
+}
+.info-sect iframe .freebirdAccentBackground {
+  background-color: transparent;
+}
 
+@media screen and (min-width: 1024px) {
+  #wrapper {
+    background-position: center;
+  }
+}
 @media screen and (max-width: 768px) {
   #cards section.work-card {
     width: calc(100%/2 - 1.5%*2);
   }
 }
 @media screen and (max-width: 480px) {
+  #wrapper {
+    background-image: url(../img/cover.png);
+    background-position: center;
+    background-size: cover;
+  }
+
   #cards section.work-card {
     width: calc(100% - 1.5%*2);
   }
