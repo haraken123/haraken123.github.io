@@ -75,6 +75,7 @@ header nav ul li:last-child {
 .work_info {
   box-sizing: border-box;
   padding: 20px;
+  padding-bottom: 50px;
   font-size: 1.1em;
   background-color: rgba(255, 255, 255, 0.5);
   color: #555;
@@ -188,7 +189,7 @@ header nav ul li:last-child {
   border-right: 30px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 30px solid transparent;
-  margin: 20px auto -20px;
+  margin: 20px auto -10px;
 }
 
 .work-item:last-child .sankaku {
