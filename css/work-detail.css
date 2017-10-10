@@ -11,7 +11,7 @@ body {
 }
 
 #content-wrapper {
-  padding: 10px;
+  padding: 0 10px;
   background-color: #eee;
 }
 
@@ -69,13 +69,12 @@ header nav ul li:last-child {
 .work-item {
   box-sizing: border-box;
   min-height: 100vh;
-  padding: 20px 10px 40px;
+  padding: 30px 10px 40px;
 }
 
 .work_info {
   box-sizing: border-box;
   padding: 20px;
-  padding-bottom: 50px;
   font-size: 1.1em;
   background-color: rgba(255, 255, 255, 0.5);
   color: #555;
@@ -125,9 +124,6 @@ header nav ul li:last-child {
 #content-wrapper img {
   max-width: 400px;
   max-height: 300px;
-}
-#content-wrapper .work-item {
-  padding: 10px;
 }
 #content-wrapper .work-item:nth-child(odd) {
   background-color: #eee;
@@ -189,7 +185,7 @@ header nav ul li:last-child {
   border-right: 30px solid transparent;
   border-bottom: 20px solid transparent;
   border-left: 30px solid transparent;
-  margin: 20px auto -10px;
+  margin: 0px auto -20px;
 }
 
 .work-item:last-child .sankaku {
