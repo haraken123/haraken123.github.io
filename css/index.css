@@ -114,6 +114,9 @@ body {
 #content-wrapper {
   background-color: rgba(232, 236, 237, 0.9);
 }
+#content-wrapper h2 {
+  font-size: 2em;
+}
 
 header {
   height: 80vh;
@@ -148,6 +151,16 @@ header .profile p .profile_text {
 
 #greeting {
   line-height: 4em;
+}
+
+.nav-index {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+
+#works h2 {
+  line-height: 1em;
+  padding-left: 15px;
 }
 
 #cards section.work-card {
@@ -195,6 +208,7 @@ header .profile p .profile_text {
 }
 .info-sect p {
   text-align: right;
+  line-height: 3.5em;
 }
 .info-sect iframe {
   width: 100%;
@@ -202,6 +216,21 @@ header .profile p .profile_text {
 }
 .info-sect iframe .freebirdAccentBackground {
   background-color: transparent;
+}
+
+.sns-links {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  margin: 20px auto;
+  line-height: 2em;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 20px 0px;
+}
+.sns-links .sns-icon {
+  display: block;
 }
 
 @media screen and (min-width: 1024px) {
