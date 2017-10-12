@@ -104,7 +104,7 @@ body {
 
 #wrapper {
   overflow: hidden;
-  background-image: url(../img/cover_left3-compressor.jpg);
+  background-image: url(../img/cover_nontitle_wide.png);
   background-size: auto 120%;
   background-position: right;
   background-repeat: no-repeat;
@@ -121,6 +121,14 @@ body {
 header {
   height: 80vh;
   position: relative;
+}
+header h1 {
+  font-size: 4.2em;
+  color: #171717;
+  mix-blend-mode: color-burn;
+  transform: rotate3d(0.5, 0.9, 0, 29deg);
+  line-height: 1.5em;
+  margin-top: 60px;
 }
 header .hero_img {
   display: block;
@@ -139,13 +147,15 @@ header .profile {
   margin: 0 10px;
   width: 380px;
   transform: rotate(0deg);
-  color: #0d2126;
+  color: #06090a;
+  mix-blend-mode: color-burn;
 }
 header .profile p {
   width: 100%;
 }
 header .profile p .profile_text {
-  background-color: rgba(163, 193, 201, 0.7);
+  background-color: #1a2322;
+  color: #f7d2d2;
   line-height: 1.1em;
 }
 

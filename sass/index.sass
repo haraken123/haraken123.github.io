@@ -9,7 +9,7 @@ body
 
 #wrapper
   overflow: hidden
-  background-image: url(../img/cover_left3-compressor.jpg)
+  background-image: url(../img/cover_nontitle_wide.png)
   background-size: auto 120%
   background-position: right
   background-repeat: no-repeat
@@ -21,6 +21,13 @@ body
 header
   height: 80vh
   position: relative
+  h1
+    font-size: 4.2em
+    color: #171717
+    mix-blend-mode: color-burn
+    transform:  rotate3d(.5, .9, 0, 29deg)
+    line-height: 1.5em
+    margin-top: 60px
   .hero_img
     display: block
     margin: 0 auto
@@ -37,11 +44,13 @@ header
     margin: 0 10px
     width: 380px
     transform: rotate(0deg)
-    color: hsla(192, 49%, 10%, 1)
+    color: #06090a
+    mix-blend-mode: color-burn
     p
       width: 100%
       .profile_text
-        background-color: rgba(163, 193, 201, .7)
+        background-color: #1a2322
+        color: #f7d2d2
         line-height: 1.1em
 
 #greeting
