@@ -31,7 +31,7 @@ $(function() {
         var windowHeight = $(window).height();
         if (scroll > imgPos - windowHeight){
           $(this).css("opacity","1" );
-          $(this).css("margin-top","10px" );
+          $(this).css("margin-top","20px" );
         } else {
           $(this).css("opacity","0" );
           $(this).css("margin-top","100px" );

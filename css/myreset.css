@@ -17,51 +17,39 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: "";
-  content: none;
-}
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
-/* 追加=================== = */
+/* 追加=================== =*/
 a {
   text-decoration: none;
-  color: inherit;
-}
+  color: inherit; }
 
 .cf {
-  zoom: 1;
-}
+  zoom: 1; }
 
 .cf:after {
   content: "";
   display: block;
-  clear: both;
-}
-
-/*# sourceMappingURL=myreset.css.map */
+  clear: both; }
