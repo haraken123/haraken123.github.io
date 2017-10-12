@@ -23,7 +23,7 @@ $(function() {
   
   $(function(){
     $('.work-card, .info-sect ').css("opacity","0");
-    $('.work-card, .info-sect ').css("margin-top","15%");
+    $('.work-card, .info-sect ').css("margin-top","100px");
     $(window).scroll(function (){
       $(".work-card, .info-sect ").each(function(){
         var imgPos = $(this).offset().top;    
@@ -31,10 +31,10 @@ $(function() {
         var windowHeight = $(window).height();
         if (scroll > imgPos - windowHeight){
           $(this).css("opacity","1" );
-          $(this).css("margin-top","5%" );
+          $(this).css("margin-top","10px" );
         } else {
           $(this).css("opacity","0" );
-          $(this).css("margin-top","15%" );
+          $(this).css("margin-top","100px" );
         }
       });
       var ii = 0;
