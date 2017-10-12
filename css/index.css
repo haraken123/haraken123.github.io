@@ -255,9 +255,16 @@ header .profile p .profile_text {
 }
 @media screen and (max-width: 480px) {
   #wrapper {
-    background-image: url(../img/cover.png);
+    background-image: url(../img/cover_nontitle.png);
     background-position: center;
     background-size: cover;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+  header .profile {
+    font-size: 0.9em;
   }
 
   #cards section.work-card {
