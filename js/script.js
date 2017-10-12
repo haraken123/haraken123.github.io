@@ -23,6 +23,7 @@ $(function() {
   
   $(function(){
     $('.work-card, .info-sect ').css("opacity","0");
+    $('.work-card, .info-sect ').css("margin-top","15%");
     $(window).scroll(function (){
       $(".work-card, .info-sect ").each(function(){
         var imgPos = $(this).offset().top;    
