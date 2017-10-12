@@ -133,14 +133,22 @@ header
       width: calc(100%/2 - 1.5%*2)
 
 @media screen and (max-width: 480px)
-
   #wrapper
-    background-image: url(../img/cover_nontitle.png)
-    background-position: center
-    background-size: cover
+    background: none
+  body::before 
+    content: ""
+    display: block
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -1
+    width: 100%
+    height: 100vh
+    background: url(../img/cover_nontitle.png) center/cover no-repeat
+
   header
     h1
-      font-size: 3em
+      font-size: 2.8em
     .profile
       font-size: .9em
       
