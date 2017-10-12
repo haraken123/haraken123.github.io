@@ -84,6 +84,7 @@ header {
     text-align: center;
     background-color: #000;
     margin-right: 10px;
+    margin-bottom: 5px;
     font-weight: bold; }
   .work_tags .work_tag0 {
     background-color: #2f9a8a; }
@@ -127,8 +128,10 @@ header {
 #content-wrapper .work-item .work_data {
   float: right; }
 
-#content-wrapper .work-item .work_url .work_data {
-  float: none; }
+#content-wrapper .work-item .work_url {
+  word-wrap: break-word; }
+  #content-wrapper .work-item .work_url .work_data {
+    float: none; }
 
 #content-wrapper .work-item .work_detail .work_data:before {
   content: "　"; }
@@ -175,6 +178,11 @@ header {
 .work_images {
   margin-top: 60px;
   margin-bottom: 60px; }
+
+@media screen and (max-width: 480px) {
+  #content-wrapper img {
+    max-width: 100%;
+    max-height: auto; } }
 
 @media print {
   body {
