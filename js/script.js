@@ -14,8 +14,8 @@ $(function() {
     }
   });
 
-  $('#cards').imagesLoaded( function() {
-    $('#cards').masonry({
+  $('.cards').imagesLoaded( function() {
+    $('.cards').masonry({
       itemSelector: '.work-card',
       isAnimated: true
     });

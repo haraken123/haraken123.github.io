@@ -3,12 +3,12 @@ body {
   color: #333;
   font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic'; }
 
-#wrapper {
+.wrapper {
   max-width: 1024px;
   width: 100%;
   margin: 0px auto 8px; }
 
-#content-wrapper {
+.content-wrapper {
   padding: 0 10px;
   background-color: #eee; }
 
@@ -88,7 +88,7 @@ footer {
 body {
   background-color: rgba(232, 236, 237, 0.9); }
 
-#wrapper {
+.wrapper {
   overflow: hidden;
   background-image: url(../img/cover_nontitle_wide.png);
   background-size: auto 120%;
@@ -96,15 +96,15 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
-#content-wrapper {
+.content-wrapper {
   background-color: rgba(232, 236, 237, 0.9); }
-  #content-wrapper h2 {
+  .content-wrapper h2 {
     font-size: 2em; }
 
 header {
   height: 80vh;
   position: relative; }
-  header h1 {
+  header .mainTitle {
     font-size: 4.2em;
     color: #171717;
     mix-blend-mode: color-burn;
@@ -122,8 +122,6 @@ header {
     padding: 4px;
     left: 0;
     right: 67px;
-    font-size: 0.95em;
-    font-weight: bold;
     text-align: right;
     margin: 0 10px;
     width: 380px;
@@ -131,24 +129,21 @@ header {
             transform: rotate(0deg);
     color: #06090a;
     mix-blend-mode: color-burn; }
-    header .profile p {
-      width: 100%; }
-      header .profile p .profile_text {
-        background-color: #1a2322;
-        color: #f7d2d2;
-        line-height: 1.1em; }
-
-#greeting {
-  line-height: 4em; }
+    header .profile .profile_text {
+      background-color: #1a2322;
+      color: #f7d2d2;
+      line-height: 1.1em;
+      font-size: 0.95em;
+      font-weight: bold; }
 
 .nav-index {
   padding-top: 45px; }
 
-#works h2 {
+.works h2 {
   line-height: 1em;
   padding-left: 15px; }
 
-#cards section.work-card {
+.cards section.work-card {
   width: calc(100%/3 - 1.5%*2);
   position: relative;
   background-color: #d9edf2;
@@ -158,19 +153,19 @@ header {
           box-shadow: 1px 1px 5px 2px #777;
   -webkit-transition: .7s all 0s ease;
   transition: .7s all 0s ease; }
-  #cards section.work-card img {
+  .cards section.work-card img {
     display: block;
     -webkit-filter: brightness(0.65);
             filter: brightness(0.65);
     width: 100%;
     -webkit-transition: all .3s ease;
     transition: all .3s ease; }
-    #cards section.work-card img:hover {
+    .cards section.work-card img:hover {
       -webkit-filter: brightness(1);
               filter: brightness(1); }
-      #cards section.work-card img:hover + h3 {
+      .cards section.work-card img:hover + h3 {
         top: 0px; }
-  #cards section.work-card h3 {
+  .cards section.work-card h3 {
     position: absolute;
     top: -100px;
     width: 100%;
@@ -218,15 +213,15 @@ header {
     display: block; }
 
 @media screen and (min-width: 1024px) {
-  #wrapper {
+  .wrapper {
     background-position: center; } }
 
 @media screen and (max-width: 768px) {
-  #cards section.work-card {
+  .cards section.work-card {
     width: calc(100%/2 - 1.5%*2); } }
 
 @media screen and (max-width: 480px) {
-  #wrapper {
+  .wrapper {
     background: none; }
   body::before {
     content: "";
@@ -238,13 +233,12 @@ header {
     width: 100%;
     height: 100vh;
     background: url(../img/cover_nontitle.png) center/cover no-repeat; }
-  header h1 {
+  header .mainTitle {
     font-size: 2.8em; }
-  header .profile {
+  header .profile .profile_text {
+    background-color: #002938;
+    color: #eefcff;
+    opacity: .8;
     font-size: .9em; }
-    header .profile p .profile_text {
-      background-color: #002938;
-      color: #eefcff;
-      opacity: .8; }
-  #cards section.work-card {
+  .cards section.work-card {
     width: calc(100% - 1.5%*2); } }

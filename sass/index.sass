@@ -7,21 +7,21 @@
 body
   background-color: hsla(193, 14%, 92%, 0.9)
 
-#wrapper
+.wrapper
   overflow: hidden
   background-image: url(../img/cover_nontitle_wide.png)
   background-size: auto 120%
   background-position: right
   background-repeat: no-repeat
   background-attachment: fixed
-#content-wrapper
+.content-wrapper
   background-color: hsla(193, 14%, 92%, 0.9)
   h2
     font-size: 2em
 header
   height: 80vh
   position: relative
-  h1
+  .mainTitle
     font-size: 4.2em
     color: #171717
     mix-blend-mode: color-burn
@@ -38,32 +38,27 @@ header
     padding: 4px
     left: 0
     right: 67px
-    font-size: 0.95em
-    font-weight: bold
     text-align: right
     margin: 0 10px
     width: 380px
     transform: rotate(0deg)
     color: #06090a
     mix-blend-mode: color-burn
-    p
-      width: 100%
-      .profile_text
-        background-color: #1a2322
-        color: #f7d2d2
-        line-height: 1.1em
-
-#greeting
-  line-height: 4em
+    .profile_text
+      background-color: #1a2322
+      color: #f7d2d2
+      line-height: 1.1em
+      font-size: 0.95em
+      font-weight: bold
 
 .nav-index
   padding-top: 45px
-#works
+.works
   h2
     line-height: 1em
     padding-left: 15px
 
-#cards
+.cards
   section.work-card
     width: calc(100%/3 - 1.5%*2)
     position: relative
@@ -123,17 +118,17 @@ header
     display: block
 
 @media screen and (min-width: 1024px)
-  #wrapper
+  .wrapper
     background-position: center
   
 @media screen and (max-width: 768px)
 
-  #cards
+  .cards
     section.work-card
       width: calc(100%/2 - 1.5%*2)
 
 @media screen and (max-width: 480px)
-  #wrapper
+  .wrapper
     background: none
   body::before 
     content: ""
@@ -147,16 +142,15 @@ header
     background: url(../img/cover_nontitle.png) center/cover no-repeat
 
   header
-    h1
+    .mainTitle
       font-size: 2.8em
     .profile
-      font-size: .9em
-      p
-        .profile_text
-          background-color: hsl(196, 100%, 11%)
-          color: #eefcff
-          opacity: .8
+      .profile_text
+        background-color: hsl(196, 100%, 11%)
+        color: #eefcff
+        opacity: .8
+        font-size: .9em
       
-  #cards
+  .cards
     section.work-card
       width: calc(100% - 1.5%*2)
