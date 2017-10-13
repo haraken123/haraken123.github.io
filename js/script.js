@@ -45,13 +45,8 @@ $(function() {
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= imgPos && scroll <= imgPos + imgHeight ){
-          console.log(ii+" added");
-          console.log(scroll+"  scroll");
-          console.log(imgPos+"  imgPos");
-          console.log(imgHeight+"  imgHeight");
           $( "nav ul li:nth-child(" + ii + ") .nav-item" ).addClass('bottom-bordered');       
         } else {
-          console.log(ii+" removed");
           $( "nav ul li:nth-child(" + ii + ") .nav-item" ).removeClass('bottom-bordered');       
         }
       });
