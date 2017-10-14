@@ -15,10 +15,11 @@
       <a href="index.html">Portfolio top↑</a>
       <nav>
         <ul>
+          include components/settings
           include components/variables
           - var j = 0
           each work in works
-            if work.isPublic
+            if (settings.isForAuthorized || work.isPublic) && work.isReady
               <li><a href="#work#{++j}">#{j}</a></li>
               <li>/</li>
 
@@ -29,7 +30,7 @@
       include components/variables
       - var i = 0
       each work in works
-        if work.isPublic
+        if (settings.isForAuthorized || work.isPublic) && work.isReady
           <div id="work#{++i}" class="work-item">
             <div class="work_header">
               <div class="work_tags cf">

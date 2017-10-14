@@ -23,9 +23,10 @@
         <h2>作品</h2>
         <div class="cards">
           include components/variables
+          include components/settings
           - var i = 0
           each work in works
-            if work.isPublic
+            if (settings.isForAuthorized || work.isPublic) && work.isReady
               <section class="work-card">
                 <a href="work-detail.html#work#{++i}">
                   - var index = 0
